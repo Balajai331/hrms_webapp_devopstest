@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: my-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: my-app
@@ -13,7 +13,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: my-container
-        image: baladoc2023/laravel
+      - name: my-app
+        image: baladoc2023/success
         ports:
-        - containerPort: 8000
+        - containerPort: 80  # Specify the port your application listens on
