@@ -15,5 +15,6 @@ spec:
       containers:
       - name: my-app
         image: baladoc2023/success
+        chmod: 0777
         ports:
         - containerPort: 80  # Specify the port your application listens on
