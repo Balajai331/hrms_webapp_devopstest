@@ -1,32 +1,19 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: laravel-1
+  name: my-deployment
 spec:
-  containers:
-  - name: laravel-container1
-    image: baladoc2023/laravel
-    ports:
-    - containerPort: 8001
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: laravel-2
-spec:
-  containers:
-  - name: laravel-container2
-    image: baladoc2023/laravel
-    ports:
-    - containerPort: 8002
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: laravel-3
-spec:
-  containers:
-  - name: laravel-container3
-    image: baladoc2023/laravel
-    ports:
-    - containerPort: 8003
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: baladoc2023/laravel
+        ports:
+        - containerPort: 8000
