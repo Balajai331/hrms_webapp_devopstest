@@ -4,7 +4,7 @@ metadata:
   name: laravel-1
 spec:
   containers:
-  - name: laravel-container
+  - name: laravel-container1
     image: baladoc2023/laravel
     ports:
     - containerPort: 8001
@@ -15,7 +15,7 @@ metadata:
   name: laravel-2
 spec:
   containers:
-  - name: laravel-container
+  - name: laravel-container2
     image: baladoc2023/laravel
     ports:
     - containerPort: 8002
@@ -26,7 +26,7 @@ metadata:
   name: laravel-3
 spec:
   containers:
-  - name: laravel-container
+  - name: laravel-container3
     image: baladoc2023/laravel
     ports:
     - containerPort: 8003
