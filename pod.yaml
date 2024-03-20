@@ -16,4 +16,4 @@ spec:
       - name: my-app
         image: baladoc2023/success
         ports:
-        - containerPort: 80  # Specify the port your application listens on
+        - containerPort: 8000  # Specify the port your application listens on
