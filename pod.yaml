@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: laravel-1
+spec:
+  containers:
+  - name: laravel-container
+    image: baladoc2023/laravel
+    ports:
+    - containerPort: 8001
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: laravel-2
+spec:
+  containers:
+  - name: laravel-container
+    image: baladoc2023/laravel
+    ports:
+    - containerPort: 8002
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: laravel-3
+spec:
+  containers:
+  - name: laravel-container
+    image: baladoc2023/laravel
+    ports:
+    - containerPort: 8003
