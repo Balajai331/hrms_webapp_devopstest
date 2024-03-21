@@ -17,5 +17,5 @@ spec:
         image: baladoc2023/success
         ports:
         - containerPort: 80
-  mode: "0777"
+  mode: 0777
     # Specify the port your application listens on
