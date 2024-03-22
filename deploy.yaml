@@ -1,29 +1,27 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: laravel
+  name: laravel 
   labels:
-    app:  myapp
+    webserver: laravel   #key value pair
 spec:
   containers:
-  - name: laravel
+  - name: cont1
     image: laravelfans/laravel
     ports:
-    - containerPort: 8081
+      - containerPort: 8000
 
 ---
-
 
 kind: Service
 apiVersion: v1
 metadata:
-  name:  mynodeport
+  name: mynodeservice
 spec:
-  selector:
-    app:  myapp
-  type:  NodePort
+  type: NodePort
+  selector: 
+    webserver: laravel   #key value pair
   ports:
-  - name:  httpd
-    port:  80
-    targetPort:  8081
-    protocol: TCP
+    - port:  8000    #cluster ip port once node is created cluster ip will create
+      targetPort:  8000
+    #  nodePort : 32001   this will take default value 
