@@ -11,7 +11,7 @@ COPY . /var/www/html
 
 
 # Expose port 80 to allow outside access to our application
-EXPOSE 8000
+EXPOSE 80
 
 # Start Apache server
 CMD ["apache2-foreground"]
