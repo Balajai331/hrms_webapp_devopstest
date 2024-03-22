@@ -9,7 +9,7 @@ spec:
   - name: laravel
     image: baladoc2023/final
     ports:
-    - containerPort: 8080
+    - containerPort: 8081
 
 ---
 
@@ -25,5 +25,5 @@ spec:
   ports:
   - name:  httpd
     port:  80
-    targetPort:  8080
+    targetPort:  8081
     protocol: TCP
