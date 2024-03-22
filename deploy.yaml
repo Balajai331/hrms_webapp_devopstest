@@ -24,4 +24,5 @@ spec:
   ports:
     - port:  8000    #cluster ip port once node is created cluster ip will create
       targetPort:  8000
+      protocol: TCP
     #  nodePort : 32001   this will take default value 
